@@ -81,9 +81,11 @@ function sendSlack(text){
 
   const jsonData =
       {
-        "channel": "#プログラミング",   // 通知したいチャンネル名
-        "text" : text,
-        "unfurl_links": true 
+        "channel": "#プログラミング",   // 通知したいチャンネル
+        "username": "タスクリマインドBOT", // Botの表示名
+        "icon_emoji": "ロボット", // Botのアイコン,
+        "unfurl_links": true, // 送信したリンクを展開する
+        "text": text,
       };
 
   const payload = JSON.stringify(jsonData);
